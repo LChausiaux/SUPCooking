@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SUPCooking</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_new_recipe">Add Recipe</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_logout">Logout</string>
+</resources>
