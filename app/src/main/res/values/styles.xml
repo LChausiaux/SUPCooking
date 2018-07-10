@@ -5,6 +5,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:textViewStyle">@style/NexaTextViewStyle</item>
+    </style>
+
+    <style name="NexaTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/nexa_light</item>
     </style>
 
 </resources>

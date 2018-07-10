@@ -1,6 +1,8 @@
 package supcooking.supinfo.com.supcooking.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import java.util.ArrayList;
 
 import supcooking.supinfo.com.supcooking.Model.Recipe;
 import supcooking.supinfo.com.supcooking.R;
+import supcooking.supinfo.com.supcooking.RecipeActivity;
 
 public class RecipeListAdapter extends BaseAdapter
 {
@@ -43,6 +46,16 @@ public class RecipeListAdapter extends BaseAdapter
     public View getView(int i, View listItem, ViewGroup parent) {
         if(listItem == null)
             listItem = LayoutInflater.from(context).inflate(R.layout.recipe_list_item, parent, false);
+
+        //Click listener
+        listItem.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(context, RecipeActivity.class);
+                intent.putExtra("Recipe", "id recipe");
+                context.startActivity(intent);
+            }
+        });
 
         final Recipe recipe = getItem(i);
         TextView name = listItem.findViewById(R.id.name_recipe);
